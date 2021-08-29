@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>搜索</title>
+<style type="text/css">
+body 
+{
+background-color:black;
+}
+.divForm{
+margin: 100px auto;
+height: 20px;
+width:	350px;
+}
+</style>
+</head>
+<body>
+<div class="divForm">
+  <select name="engine" id="choice">
+   
+   <option value="https://www.google.com/search?q=">谷歌</option>
+   <option value="https://cn.bing.com/search?q=">必应</option>
+   <option value="https://www.baidu.com/s?wd=">百度</option>
+   <option value="https://www.zhihu.com/search?q=">知乎</option>
+   <option value="https://www.sogou.com/web?query=">搜狗</option>
+   <option value="https://weixin.sogou.com/weixin?type=2&query=">微信</option>
+   <option value="https://github.com/search?q=">github</option>
+   <option value="https://www.dashengpan.com/#/main/search?keyword=">网盘</option>
+   <option value="https://zzk.cnblogs.com/s?w=">博客园</option>
+  </select>
+  <input type="text"  id="s"  onkeydown="if(event.keyCode==13) {return search();}">
+  <input type="button" value="搜索" onclick="search();">
+</div>
+
+
+
+
+<script>
+function search(){
+    var selected_val = document.getElementById("choice").value
+    var val= document.getElementById("s").value;
+    window.open(selected_val + val);
+}
+</script>
+</body>
+</html>
